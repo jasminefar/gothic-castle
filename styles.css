@@ -1,0 +1,79 @@
+body {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.castle {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+.tower {
+    width: 100px;
+    height: 300px;
+    background-color: #333;
+    position: relative;
+}
+
+.tower-left {
+    border-radius: 0 0 0 50px;
+}
+
+.tower-right {
+    border-radius: 0 0 50px 0;
+}
+
+.roof {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 60px solid #666;
+    position: absolute;
+    top: -60px;
+    left: 0;
+}
+
+.main-building {
+    width: 300px;
+    height: 200px;
+    background-color: #444;
+    position: relative;
+    margin: 0 50px;
+    border-radius: 0 0 30px 30px;
+}
+
+.windows {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.windows::before, .windows::after {
+    content: '';
+    width: 20px;
+    height: 50px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.drawbridge {
+    width: 80px;
+    height: 100px;
+    background-color: #654321;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 0 10px 10px;
+    border: 5px solid #333;
+}
